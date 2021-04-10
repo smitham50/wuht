@@ -3,9 +3,12 @@
 const printbreak = require('./keywords/break');
 const printcase = require('./keywords/case');
 const printswitch = require('./keywords/switch');
+const printcatch = require('./keywords/catch');
+const printtry = require('./keywords/try');
+const printfinally = require('./keywords/finally');
 
 try {
     eval(`print${process.argv[2]}`)();
 } catch {
-    console.log("Keyword not found");
+    console.log("The term you searched is not a reserved JavaScript keyword");
 }

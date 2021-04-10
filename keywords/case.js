@@ -2,9 +2,11 @@ module.exports = () => {
     console.log("");
     console.log("- case (see switch) -\n");
 
-    console.log("The switch statement evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case, as well as statements in cases that follow the matching case.\n");
+    console.log("The switch statement evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case,");
+    console.log("as well as statements in cases that follow the matching case.\n");
 
-    console.log("Demo:\n");
+    console.log("- Demo -\n");
+
     console.log("const expr = 'Papayas';");
     console.log("switch (expr) {");
     console.log("  case 'Oranges':");
