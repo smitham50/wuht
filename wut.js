@@ -10,6 +10,8 @@ const printclass = require('./keywords/class');
 const printconst = require('./keywords/const');
 const printcontinue = require('./keywords/continue');
 const printdebugger = require('./keywords/debugger');
+const printdefault = require('./keywords/default');
+const printdelete = require('./keywords/delete');
 
 try {
     eval(`print${process.argv[2]}`)();
