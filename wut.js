@@ -13,6 +13,8 @@ const printdebugger = require('./keywords/debugger');
 const printdefault = require('./keywords/default');
 const printdelete = require('./keywords/delete');
 const printdo = require('./keywords/do');
+const printif = require('./keywords/if');
+const printelse = require('./keywords/else');
 
 try {
     eval(`print${process.argv[2]}`)();
