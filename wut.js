@@ -9,6 +9,7 @@ const printfinally = require('./keywords/finally');
 const printclass = require('./keywords/class');
 const printconst = require('./keywords/const');
 const printcontinue = require('./keywords/continue');
+const printdebugger = require('./keywords/debugger');
 
 try {
     eval(`print${process.argv[2]}`)();
