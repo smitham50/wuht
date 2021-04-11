@@ -6,6 +6,7 @@ const printswitch = require('./keywords/switch');
 const printcatch = require('./keywords/catch');
 const printtry = require('./keywords/try');
 const printfinally = require('./keywords/finally');
+const printclass = require('./keywords/class');
 
 try {
     eval(`print${process.argv[2]}`)();
