@@ -15,6 +15,7 @@ const printdelete = require('./keywords/delete');
 const printdo = require('./keywords/do');
 const printif = require('./keywords/if');
 const printelse = require('./keywords/else');
+const printexport = require('./keywords/export');
 
 try {
     eval(`print${process.argv[2]}`)();

@@ -1,0 +1,175 @@
+module.exports = () => {
+    console.log("");
+    console.log("---------------");
+    console.log("  export  ");
+    console.log("---------------\n");
+
+    console.log("The export statement is used when creating JavaScript modules to export live bindings to functions, objects, or primitive values from the module so they can be used");
+    console.log("by other programs with the import statement. Bindings that are exported can still be modified locally; when imported, although they can only be read by the importing");
+    console.log("module the value updates whenever it is updated by the exporting module.\n");
+    console.log("Exported modules are in strict mode whether you declare them as such or not. The export statement cannot be used in embedded scripts.\n");
+
+    console.log("---------------");
+    console.log("  Syntax  ");
+    console.log("---------------\n");
+
+    console.log("There are two types of exports:\n");
+    console.log("    1. Named Exports (Zero or more exports per module)");
+    console.log("    2. Default Exports (One per module)\n");
+    console.log("  // Exporting individual features");
+    console.log("  export let name1, name2, …, nameN; // also var, const");
+    console.log("  export let name1 = …, name2 = …, …, nameN; // also var, const");
+    console.log("  export function functionName() {... }");
+    console.log("  export class ClassName {... }\n");
+    console.log("  // Export list");
+    console.log("  export { name1, name2, …, nameN };\n");
+    console.log("  // Renaming exports");
+    console.log("  export { variable1 as name1, variable2 as name2, …, nameN };\n");
+    console.log("  // Exporting destructured assignments with renaming");
+    console.log("  export const { name1, name2: bar } = o;\n");
+    console.log("  // Default exports");
+    console.log("  export default expression;");
+    console.log("  export default function (…) { … } // also class, function*");
+    console.log("  export default function name1(…) { … } // also class, function*");
+    console.log("  export { name1 as default, … };\n");
+    console.log("  // Aggregating modules");
+    console.log("  export * from …; // does not set the default export");
+    console.log("  export * as name1 from …; // Draft ECMAScript® 2O21");
+    console.log("  export { name1, name2, …, nameN } from …;");
+    console.log("  export { import1 as name1, import2 as name2, …, nameN } from …;");
+    console.log("  export { default, … } from …;\n");
+    console.log("nameN:");
+    console.log("    Identifier to be exported (so that it can be imported via import in another script).\n");
+
+    console.log("---------------");
+    console.log("  Description  ");
+    console.log("---------------\n");
+
+    console.log("There are two different types of export, named and default. You can have multiple named exports per module but only one default export. Each type corresponds to one");
+    console.log("of the above syntax:\n");
+    console.log("Named exports:\n");
+    console.log("  // export features declared earlier");
+    console.log("  export { myFunction, myVariable };\n");
+    console.log("  // export individual features (can export var, let,");
+    console.log("  // const, function, class)");
+    console.log("  export let myVariable = Math.sqrt(2);");
+    console.log("  export function myFunction() { ... };\n");
+    console.log("Default exports:\n");
+    console.log("  // export feature declared earlier as default");
+    console.log("  export { myFunction as default };\n");
+    console.log("  // export individual features as default");
+    console.log("  export default function () { ... }");
+    console.log("  export default class { ..}\n");
+    console.log("  // each export overwrites the previous one");
+    console.log("Named exports are useful to export several values. During the import, it is mandatory to use the same name of the corresponding object.\n");
+    console.log("But a default export can be imported with any name for example:\n");
+    console.log("  // file test.js");
+    console.log("  let k; export default k = 12;\n");
+    console.log("  ----------\n");
+    console.log("  // some other file");
+    console.log("  import m from './test'; // note that we have the freedom to use import m instead of import k, because k was default export");
+    console.log("  console.log(m);        // will log 12\n");
+    console.log("You can also rename named exports to avoid naming conflicts:\n");
+    console.log("  export {");
+    console.log("    myFunction as function1,");
+    console.log("    myVariable as variable");
+    console.log("  };\n");
+
+    console.log("- Re-exporting/Aggregating -\n");
+    
+    console.log("It is also possible to 'import/export' from different modules in a parent module so that they are available to import from that module. In other words, one can create");
+    console.log("a single module concentrating various exports from various modules.\n");
+    console.log("This can be achieved with the 'export from' syntax:\n");
+    console.log("  export {");
+    console.log("    default as function1,");
+    console.log("    function2");
+    console.log("  } from 'bar.js';\n");
+    console.log("Which is comparable to a combination of import and export:\n");
+    console.log("  import {");
+    console.log("    default as function1,");
+    console.log("    function2");
+    console.log("  } from 'bar.js';");
+    console.log("  export { function1 as default, function2 };\n");
+    console.log("But where function1 and function2 do not become available inside the current module.\n");
+    console.log("Note: The following is syntactically invalid despite its import equivalent:\n");
+    console.log("  import DefaultExport from 'bar.js'; // Valid\n");
+    console.log("  export DefaultExport from 'bar.js'; // Invalid\n");
+    console.log("The correct way of doing this is to rename the export:\n");
+    console.log("  export { default as DefaultExport } from 'bar.js';\n");
+    console.log("The 'export from' syntax allows the as token to be omitted; however this will mean the default item cannot be imported as a named import:\n");
+    console.log("  export { default, function2 } from 'bar.js';\n");
+
+    console.log("---------------");
+    console.log("  Examples  ");
+    console.log("---------------\n");
+
+    console.log("- Using named exports -\n");
+
+    console.log("In a module my-module.js, we could include the following code:\n");
+    console.log("  // module 'my - module.js'");
+    console.log("  function cube(x) {");
+    console.log("    return x * x * x;");
+    console.log("  }\n");
+    console.log("  const foo = Math.PI + Math.SQRT2;\n");
+    console.log("  var graph = {");
+    console.log("    options: {");
+    console.log("      color: 'white',");
+    console.log("      thickness: '2px'");
+    console.log("    },");
+    console.log("    draw: function () {");
+    console.log("      console.log('From graph draw function');");
+    console.log("    }");
+    console.log("  }\n");
+    console.log("  export { cube, foo, graph };\n");
+    console.log("Then in the top-level module included in your HTML page, we could have:\n");
+    console.log("  import { cube, foo, graph } from './my-module.js';\n");
+    console.log("  graph.options = {");
+    console.log("    color: 'blue',");
+    console.log("    thickness: '3px'");
+    console.log("  };\n");
+    console.log("  graph.draw();");
+    console.log("  console.log(cube(3)); // 27");
+    console.log("  console.log(foo);    // 4.555806215962888\n");
+    console.log("It is important to note the following:\n");
+    console.log("    - You need to include this script in your HTML with a <script> element of type='module', so that it gets recognized as a module and dealt with appropriately.");
+    console.log("    - You can't run JS modules via a file:// URL — you'll get CORS errors. You need to run it via an HTTP server.\n");
+    
+    console.log("- Using the default export -\n");
+
+    console.log("If we want to export a single value or to have a fallback value for your module, you could use a default export:\n");
+    console.log("  // module 'my - module.js'\n");
+    console.log("  export default function cube(x) {");
+    console.log("    return x * x * x;");
+    console.log("  }\n");
+    console.log("Then, in another script, it is straightforward to import the default export:\n");
+    console.log("  import cube from './my-module.js';");
+    console.log("  console.log(cube(3)); // 27\n");
+
+    console.log("- Using export from -\n");
+
+    console.log("Let's take an example where we have the following hierarchy:");
+    console.log("    - childModule1.js: exporting myFunction and myVariable");
+    console.log("    - childModule2.js: exporting myClass");
+    console.log("    - parentModule.js: acting as an aggregator (and doing nothing else)");
+    console.log("    - top level module: consuming the exports of parentModule.js\n");
+    console.log("This is what it would look like using code snippets:\n");
+    console.log("  // In childModule1.js");
+    console.log("  let myFunction = ...; // assign something useful to myFunction");
+    console.log("  let myVariable = ...; // assign something useful to myVariable");
+    console.log("  export { myFunction, myVariable };\n");
+    console.log("  ----------\n");
+    console.log("  // In childModule2.js");
+    console.log("  let myClass = ...; // assign something useful to myClass");
+    console.log("  export myClass;\n");
+    console.log("  ----------\n");
+    console.log("  // In parentModule.js");
+    console.log("  // Only aggregating the exports from childModule1 and childModule2");
+    console.log("  // to re-export them");
+    console.log("  export { myFunction, myVariable } from 'childModule1.js';");
+    console.log("  export { myClass } from 'childModule2.js';\n");
+    console.log("  ----------\n");
+    console.log("  // In top-level module");
+    console.log("  // We can consume the exports from a single module since parentModule");
+    console.log("  // 'collected'/'bundled' them in a single source");
+    console.log("  import { myFunction, myVariable, myClass } from 'parentModule.js'\n");
+}
