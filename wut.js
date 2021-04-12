@@ -16,6 +16,8 @@ const printdo = require('./keywords/do');
 const printif = require('./keywords/if');
 const printelse = require('./keywords/else');
 const printexport = require('./keywords/export');
+const printextends = require('./keywords/extends');
+const printfor = require('./keywords/for');
 
 try {
     eval(`print${process.argv[2]}`)();
