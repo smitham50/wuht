@@ -24,6 +24,7 @@ const printin = require('./keywords/in');
 const printinstanceof = require("./keywords/instanceof");
 const printnew = require("./keywords/new");
 const printreturn = require("./keywords/return");
+const printsuper = require('./keywords/super');
 
 try {
     eval(`print${process.argv[2]}`)();

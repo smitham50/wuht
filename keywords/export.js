@@ -147,7 +147,7 @@ module.exports = () => {
 
     console.log("- Using export from -\n");
 
-    console.log("Let's take an example where we have the following hierarchy:");
+    console.log("Let's take an example where we have the following hierarchy:\n");
     console.log("    - childModule1.js: exporting myFunction and myVariable");
     console.log("    - childModule2.js: exporting myClass");
     console.log("    - parentModule.js: acting as an aggregator (and doing nothing else)");
