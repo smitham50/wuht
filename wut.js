@@ -23,6 +23,7 @@ const printimport = require('./keywords/import');
 const printin = require('./keywords/in');
 const printinstanceof = require("./keywords/instanceof");
 const printnew = require("./keywords/new");
+const printreturn = require("./keywords/return");
 
 try {
     eval(`print${process.argv[2]}`)();
