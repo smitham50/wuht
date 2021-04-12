@@ -19,6 +19,7 @@ const printexport = require('./keywords/export');
 const printextends = require('./keywords/extends');
 const printfor = require('./keywords/for');
 const printfunction = require('./keywords/function');
+const printimport = require('./keywords/import');
 
 try {
     eval(`print${process.argv[2]}`)();

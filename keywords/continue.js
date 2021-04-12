@@ -17,7 +17,7 @@ module.exports = () => {
     console.log("    text = text + i;");
     console.log("  }\n");
     console.log("  console.log(text);");
-    console.log("  // expected output: '012456789'");
+    console.log("  // expected output: '012456789'\n");
 
     console.log("---------------");
     console.log("  Syntax  ");
