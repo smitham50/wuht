@@ -21,6 +21,7 @@ const printfor = require('./keywords/for');
 const printfunction = require('./keywords/function');
 const printimport = require('./keywords/import');
 const printin = require('./keywords/in');
+const printinstanceof = require("./keywords/instanceof");
 
 try {
     eval(`print${process.argv[2]}`)();
