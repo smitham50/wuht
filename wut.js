@@ -28,6 +28,7 @@ const printsuper = require('./keywords/super');
 const printthis = require('./keywords/this');
 const printthrow = require('./keywords/throw');
 const printtypeof = require('./keywords/typeof');
+const printvar = require('./keywords/var');
 
 try {
     eval(`print${process.argv[2]}`)();
