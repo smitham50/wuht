@@ -26,6 +26,7 @@ const printnew = require("./keywords/new");
 const printreturn = require("./keywords/return");
 const printsuper = require('./keywords/super');
 const printthis = require('./keywords/this');
+const printthrow = require ('./keywords/throw');
 
 try {
     eval(`print${process.argv[2]}`)();
