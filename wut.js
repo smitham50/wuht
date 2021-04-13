@@ -30,6 +30,7 @@ const printthrow = require('./keywords/throw');
 const printtypeof = require('./keywords/typeof');
 const printvar = require('./keywords/var');
 const printvoid = require('./keywords/void');
+const printwhile = require('./keywords/while');
 
 try {
     eval(`print${process.argv[2]}`)();
