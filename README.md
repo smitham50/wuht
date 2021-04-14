@@ -1,6 +1,6 @@
 # wuht
 
-#### Search MDN JavaScript Reserved Keyword documentation in the command line
+#### Search MDN JavaScript reserved keyword documentation in the command line
 
 To install:
 npm i wuht -g
