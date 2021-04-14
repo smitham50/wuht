@@ -2,6 +2,19 @@
   "name": "wuht",
   "version": "1.0.0",
   "description": "Search MDN documentation for JavaScript reserved keywords in the command line",
+  "keywords": [
+    "documentation",
+    "MDN",
+    "js documentation",
+    "command line",
+    "search"
+  ],
+  "homepage": "https://github.com/smitham50/wuht",
+  "bugs": "https://github.com/smitham50/wuht/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smitham50/wuht"
+  },
   "main": "wuht.js",
   "bin": "./wuht.js",
   "scripts": {
