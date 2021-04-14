@@ -1,13 +1,13 @@
-# wut
+# wuht
 
 #### Search MDN JavaScript Reserved Keyword documentation in the command line
 
 To install:
-npm i wut -g
+npm i wuht -g
 
 To use:
-wut \<any JavaScript keyword\>
+wuht \<any JavaScript keyword\>
 
 Example:
-wut const
+wuht const
 

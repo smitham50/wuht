@@ -1,9 +1,9 @@
 {
-  "name": "wut",
+  "name": "wuht",
   "version": "1.0.0",
-  "description": "",
-  "main": "wut.js",
-  "bin": "./wut.js",
+  "description": "Search MDN documentation for JavaScript reserved keywords in the command line",
+  "main": "wuht.js",
+  "bin": "./wuht.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
