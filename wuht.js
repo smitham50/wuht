@@ -34,6 +34,8 @@ const printwhile = require('./keywords/while');
 const printwith = require('./keywords/with');
 const printyield = require('./keywords/yield');
 const printlet = require('./keywords/let');
+const printawait = require('./keywords/await');
+const printasync = require('./keywords/async');
 
 try {
     eval(`print${process.argv[2]}`)();
